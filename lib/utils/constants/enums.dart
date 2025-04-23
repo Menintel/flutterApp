@@ -1,5 +1,6 @@
 /// LIST OF ENUMS
 /// Cannot be created in classes
+library;
 
 enum TextSizes {small, medium, large}
 

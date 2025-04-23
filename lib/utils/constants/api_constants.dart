@@ -1,4 +1,5 @@
 /// LIST OF API CONSTANTS
+library;
 
 
 class ApiConstants {

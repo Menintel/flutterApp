@@ -1,4 +1,5 @@
 /// App Images in string formats
+library;
 
 class TImages {
   /// - - -  APP LOGOS
