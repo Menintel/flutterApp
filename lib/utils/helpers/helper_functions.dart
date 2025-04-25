@@ -22,7 +22,7 @@ class THelperFunctions {
       return Colors.black ;
     } else if (value == 'White') {
       return Colors.white ;
-    }
+    }return Colors.green;
   }
 
   static void showSnackBar(String message) {

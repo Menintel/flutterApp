@@ -2,13 +2,13 @@ class TTexts {
 
   /// - - - GLOBAL TEXTS
   /// - - - ONBOARDING TEXTS
-  static const String onBoardingTitle1 = "Choose Your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door step";
+  static const String onBoardingTitle1 = "Choose Your Product";
+  static const String onBoardingTitle2 = "Select Payment";
+  static const String onBoardingTitle3 = "Delivered to Your Doorstep";
 
-  static const String onBoardingSubTitle1 = "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
-  static const String onBoardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path -  Your Convenience, Our Priority!";
-  static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+  static const String onBoardingSubTitle1 = "Find your perfect product today!";
+  static const String onBoardingSubTitle2 = "Choose a payment method that suits you.";
+  static const String onBoardingSubTitle3 = "Fast and secure delivery to your door.";
 
   /// - - - HOME
   static const String homaAppbarTitle = "Good day for Shopping";
