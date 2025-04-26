@@ -7,8 +7,8 @@ class TImages {
   static const String lightAppLogo  = "assets/logos/shopper_logo_white.png";
 
   /// - - - SOCIAL LOGOS
-  static const String google  = "assets/logo/google_logo.png";
-  static const String facebook  = "assets/logo/facebook_logo.png";
+  static const String google  = "assets/logos/google_logo.png";
+  static const String facebook  = "assets/logos/facebook_logo.png";
 
   /// - - - ONBOARDING IMAGES
   static const String onBoardingImage1 = "assets/images/on_boarding_images/shopper_search.gif";
