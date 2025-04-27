@@ -13,7 +13,6 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     final controller = Get.put(OnboardingController());
 
     // Preload images
