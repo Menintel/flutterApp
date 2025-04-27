@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopper/features/authentification/screens/signup/verify_email.dart';
 import 'package:shopper/features/authentification/screens/signup/widgets/terms_conditions_checkbox.dart';
 import 'package:shopper/utils/constants/sizes.dart';
 import 'package:shopper/utils/constants/text_strings.dart';
@@ -50,8 +52,7 @@ class TSignupForm extends StatelessWidget {
             decoration: const InputDecoration(labelText: TTexts.phoneNumber, prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
-    
-    
+
         /// - - - Password
         TextFormField(
             obscureText: true,
@@ -62,7 +63,7 @@ class TSignupForm extends StatelessWidget {
         const TTermsAndConditionsCheckbox(),
         const SizedBox(height: TSizes.spaceBtwSections),
         /// Sign Up Button
-        SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){}, child: const Text(TTexts.creatAccount)),)
+        SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => const VerifyEmailScreen()), child: const Text(TTexts.creatAccount)),)
     
       ],),
     );
