@@ -4,6 +4,7 @@ class TTexts {
   static const String submit = "Submit";
   static const String appName = "Shopper";
   static const String tContinue = "Continue";
+  static const String tDone = "Done";
 
 
   /// - - - ONBOARDING TEXTS
@@ -31,7 +32,7 @@ class TTexts {
   static const String rememberMe = "Remember Me";
   static const String forgotPassword = "Forgot Password";
   static const String signIn = "Sign In";
-  static const String creatAccount = "Creat Account";
+  static const String creatAccount = "Create Account";
   static const String orSignInWith = "or Sign in with";
   static const String orSignUpWith = "or Sign Up with";
   static const String iAgreeTo = "I agree to";
@@ -49,7 +50,8 @@ class TTexts {
   static const String signUpTitle = "Create Your Account";
   static const String forgotPasswordTitle = "Forgot Password";
   static const String forgotPasswordSubTitle = "Don't worry sometimes people can forget too, enter email and we will send you a password reset link.";
-  static const String changeYourPasswordTitle = "Your Account Security is Our Priority! We've sent You a Secure Link to Safely Change your Password.";
+  static const String changeYourPasswordTitle = "Password Reset Email Sent";
+  static const String changeYourPasswordSubTitle = "Check Your Email ! We've sent You a Secure Link to Safely Change your Password.";
   static const String confirmEmail = "Verify Your Email address!";
   static const String confirmEmailSubTitle = "Congratulations! Your Account is Almost Ready: Verify Your Email to Start Shopping.";
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";

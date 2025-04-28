@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopper/features/authentification/screens/password_configuration/forgot_password.dart';
 import 'package:shopper/features/authentification/screens/signup/signup.dart';
+import 'package:shopper/navigation_menu.dart';
 import 'package:shopper/utils/constants/sizes.dart';
 import 'package:shopper/utils/constants/text_strings.dart';
 
@@ -44,14 +46,14 @@ class TLoginForm extends StatelessWidget {
               const Text(TTexts.rememberMe),
               ],),
             /// - - - FORGOT PASSWORD
-            TextButton(onPressed: () {}, child: Text(TTexts.forgotPassword)),
+            TextButton(onPressed: () => Get.to(() => const ForgotPassword()), child: Text(TTexts.forgotPassword)),
           ],),
       
           const SizedBox(height: TSizes.spaceBtwSections),
       
           /// - - - SIGN IN BUTTON
           SizedBox( width: double.infinity,
-            child: ElevatedButton(onPressed: (){}, child: Text(TTexts.signIn)),
+            child: ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: Text(TTexts.signIn)),
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
       
