@@ -3,8 +3,9 @@ library;
 
 class TImages {
   /// - - -  APP LOGOS
-  static const String darkAppLogo  = "assets/logos/shopper_logo_black.png";
-  static const String lightAppLogo  = "assets/logos/shopper_logo_white.png";
+  static const String darkAppLogo  = "assets/logos/avariaa_logo.png";
+  static const String lightAppLogo  = "assets/logos/avariaa_logo.png";
+  static const String fullAppLogo = "assets/logos/avariaa_full_logo.png";
 
   /// - - - SOCIAL LOGOS
   static const String google  = "assets/logos/google_logo.png";
