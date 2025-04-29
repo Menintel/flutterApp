@@ -18,7 +18,7 @@ class TTexts {
 
   /// - - - HOME
   static const String homaAppbarTitle = "Good day for Shopping";
-  static const String homaAppbarSubTitle = "Shopper";
+  static const String homaAppbarSubTitle = "Avariaa";
 
 
   /// - - - AUTHENTIFICATION FORM TEXT
