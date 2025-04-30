@@ -20,5 +20,8 @@ class TImages {
   static const String successIlustration = "assets/images/animations/success.gif";
   static const String verifyEmailIllustration = "assets/images/animations/verify_email.gif";
 
+  /// - - - CATEGORIES IMAGES 
+  
+
   
 }
