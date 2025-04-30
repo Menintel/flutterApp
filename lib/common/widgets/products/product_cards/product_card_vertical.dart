@@ -1,0 +1,92 @@
+
+import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:shopper/common/styles/shadows.dart';
+import 'package:shopper/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:shopper/common/widgets/images/rounded_image.dart';
+import 'package:shopper/utils/constants/colors.dart';
+import 'package:shopper/utils/constants/image_strings.dart';
+import 'package:shopper/utils/constants/sizes.dart';
+import 'package:shopper/utils/helpers/helper_functions.dart';
+
+import '../../icons/circular_icon.dart';
+import '../../texts/product_title.dart';
+
+class TProductCardVertical extends StatelessWidget {
+  const TProductCardVertical({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
+    return Container(
+      width: 180,
+      padding: const EdgeInsets.all(1),
+      decoration: BoxDecoration(
+        boxShadow: [TShadowStyle.verticalProductShadow],
+        borderRadius: BorderRadius.circular(TSizes.productImageRadius),
+        color: dark ? TColors.darkGrey : TColors.white,
+      ),
+      child: Column(
+        children: [
+          /// - - - ThumbNail
+          TRoundedContainer(
+            height: 180,
+            padding: const EdgeInsets.all(TSizes.sm),
+            backgroundColor: dark ? TColors.dark : TColors.white,
+            child: Stack(
+              children: [
+                /// - - - THUMBNAIL IMAGE
+                const TRoundedImage(imageUrl: TImages.product1),
+
+                /// - - - SALE TAG
+                Positioned(
+                  top: 3,
+                  left: 3,
+                  child: TRoundedContainer(
+                    radius: TSizes.sm,
+                    backgroundColor: Color.fromRGBO(255, 226, 75, 0.8),
+                    padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),
+                    child: Text('25%',style: Theme.of(context).textTheme.labelLarge!.apply(color : TColors.black)),
+                  ),
+                ),
+                /// - - - FAVOURITE ICON BUTTON
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red,)
+                  ),
+
+              ],
+            ),
+          ),
+          //const SizedBox(height: TSizes.spaceBtwItems/2),
+
+          /// - - - Details
+          Padding(padding: const EdgeInsets.only(left: TSizes.sm),
+            child: Column( 
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              TProductTitleText( title: 'Green Nike TShirt',),
+              SizedBox(height: TSizes.spaceBtwItems/2,),
+              Row(children: [
+                  Text('Nike', overflow: TextOverflow.ellipsis,
+                    maxLines: 1, style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  const SizedBox(width: TSizes.xs,),
+                  Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,)
+                ],
+              )
+
+            ],),
+          ),
+
+
+        ],
+      ),
+    );
+  }
+}
+
+
+
