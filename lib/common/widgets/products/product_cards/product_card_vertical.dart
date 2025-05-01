@@ -23,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
     return GestureDetector(
       onTap: null,
       child: Container(
-        width: 200,
+        width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
@@ -35,7 +35,6 @@ class TProductCardVertical extends StatelessWidget {
             /// - - - ThumbNail
             TRoundedContainer(
               height: 200,
-              width: 200,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.black : TColors.white,
               child: Stack(
@@ -81,11 +80,22 @@ class TProductCardVertical extends StatelessWidget {
                     Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,),
                   ],
                 ),
-                Row(
+                
+              ],),
+            ),
+
+            const Spacer(),
+
+            Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children:[
                   /// - - - PRICE 
-                  const TProductPriceText(price : '100.0'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: TSizes.sm),
+                    child: const TProductPriceText(price : '100.0'),
+                  ),
+
+                  /// - - - ADD TO CART BUTTON
                   Container(
                     decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 0, 0, 0), borderRadius: BorderRadius.only(topLeft: Radius.circular(TSizes.cardRadiusMd),
@@ -100,8 +110,6 @@ class TProductCardVertical extends StatelessWidget {
                     ),  
                   ],
                 ),
-              ],),
-            ),
           ],
         ),
       ),
