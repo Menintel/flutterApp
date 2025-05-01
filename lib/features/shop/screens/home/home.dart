@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopper/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopper/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:shopper/common/widgets/layouts/grid_layout.dart';
 import 'package:shopper/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:shopper/common/widgets/texts/section_heading.dart';
 import 'package:shopper/utils/constants/image_strings.dart';
@@ -47,14 +48,18 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(banners: [
+                  const TPromoSlider(banners: [
                     TImages.promoBanner1,
                     TImages.promoBanner2,
                     TImages.promoBanner4,
                   ],),
                   const SizedBox(height: TSizes.spaceBtwSections,),
 
-                  TProductCardVertical(),
+                  /// - - - POPULAR PRODUCTS - - -
+                  TGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const TProductCardVertical()),
+                  //TProductCardVertical(),
                 ],
               ),
             ),
@@ -64,6 +69,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

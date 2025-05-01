@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopper/utils/constants/colors.dart';
 import 'package:shopper/utils/constants/sizes.dart';
 import 'package:shopper/utils/helpers/helper_functions.dart';
 
@@ -28,7 +29,7 @@ class TCircularIcon extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: backgroundColor != null ? backgroundColor! : THelperFunctions.isDarkMode(context) 
-          ? Color.fromRGBO(0, 0, 0, 0.9) : Color.fromRGBO(255, 255, 255, 0.9),
+          ? TColors.black : Color.fromRGBO(255, 255, 255, 0.9),
       ),
       child: IconButton(onPressed: onPressed, icon: Icon(icon, color: color, size: size)),
     );
