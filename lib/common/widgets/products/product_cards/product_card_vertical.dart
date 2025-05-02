@@ -6,15 +6,19 @@ import 'package:shopper/common/widgets/custom_shapes/containers/rounded_containe
 import 'package:shopper/common/widgets/images/rounded_image.dart';
 import 'package:shopper/common/widgets/texts/product_price.dart';
 import 'package:shopper/utils/constants/colors.dart';
-import 'package:shopper/utils/constants/image_strings.dart';
 import 'package:shopper/utils/constants/sizes.dart';
 import 'package:shopper/utils/helpers/helper_functions.dart';
-
 import '../../icons/circular_icon.dart';
+import '../../texts/brand_title_verified_icon.dart';
 import '../../texts/product_title.dart';
 
 class TProductCardVertical extends StatelessWidget {
-  const TProductCardVertical({super.key});
+  const TProductCardVertical({
+    super.key,
+    required this.image,
+    });
+
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +44,7 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   /// - - - THUMBNAIL IMAGE
-                  const TRoundedImage(imageUrl: TImages.product1),
+                  TRoundedImage(imageUrl: image),
       
                   /// - - - SALE TAG
                   Positioned(
@@ -72,14 +76,7 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                 TProductTitleText( title: 'Green Nike TShirt',),
                 SizedBox(height: TSizes.spaceBtwItems/2,),
-                Row(children: [
-                    Text('Nike', overflow: TextOverflow.ellipsis,
-                      maxLines: 1, style: Theme.of(context).textTheme.labelMedium,
-                    ),
-                    const SizedBox(width: TSizes.xs,),
-                    Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,),
-                  ],
-                ),
+                TBrandTitleWithVerificationIcon(title: 'Nike',),
                 
               ],),
             ),
@@ -116,6 +113,7 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
 
 
 

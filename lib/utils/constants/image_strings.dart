@@ -21,7 +21,8 @@ class TImages {
   static const String verifyEmailIllustration = "assets/images/animations/verify_email.gif";
 
   /// - - - CATEGORIES IMAGES 
-  
+  static const String iconShoes = "assets/icons/categories/shoes.png";
+  static const String iconClothes = "assets/icons/categories/clothes.png";
 
   /// - - - BANNERS
   static const String promoBanner1 = "assets/images/banners/promo_banner_1.jpg";
